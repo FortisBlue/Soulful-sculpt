@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facial Sculpting & TMJ Workshop — Soulful Sculpt | Gold Coast</title>
+  <meta name="description" content="Learn facial sculpting and TMJ massage from Tenielle at Soulful Sculpt. An intimate professional workshop on the Gold Coast covering buccal technique, jaw release, and facial contouring. Limited to 8." />
+  <link rel="canonical" href="https://www.soulfulsculpt.com.au/workshops" />
+  <meta property="og:title" content="Facial Sculpting & TMJ Workshop — Soulful Sculpt" />
+  <meta property="og:description" content="Learn the hands-on method behind facial sculpting and TMJ release. An intimate Gold Coast workshop for beauty and wellness practitioners." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80&auto=format&fit=crop" />
+  <meta name="theme-color" content="#1C1815" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --iv:  #F9F5F0;
+      --cr:  #EDE8E0;
+      --bl:  #D4BFB4;
+      --ro:  #BF8070;
+      --te:  #9A6655;
+      --ch:  #1C1815;
+      --wd:  #281E19;
+      --go:  #B48A5A;
+      --sg:  #889A8A;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans:  'DM Sans', system-ui, sans-serif;
+      --mono:  'DM Mono', monospace;
+      --ease:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --heavy:  cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--ch);
+      color: var(--iv);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* noise layer */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.70' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9000;
+    }
+
+    /* ─── BACK NAV ─────────────────────────────────────── */
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 48px;
+      background: linear-gradient(to bottom, rgba(28,24,21,0.92) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .topbar > * { pointer-events: all; }
+    .back-link {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.52);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.22s;
+    }
+    .back-link::before {
+      content: '←';
+      font-size: 11px;
+    }
+    .back-link:hover { color: var(--iv); }
+    .topbar-brand {
+      font-family: var(--serif);
+      font-size: 14px;
+      letter-spacing: 0.07em;
+      color: rgba(249,245,240,0.7);
+      text-decoration: none;
+    }
+    .topbar-cta {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ch);
+      background: var(--ro);
+      padding: 11px 22px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.22s var(--spring);
+    }
+    .topbar-cta:hover { background: var(--te); transform: scale(1.03); }
+
+    /* ─── REVEAL ───────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.72s var(--ease), transform 0.72s var(--ease);
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.22s; }
+    .d3 { transition-delay: 0.34s; }
+    .d4 { transition-delay: 0.48s; }
+    .d5 { transition-delay: 0.62s; }
+    .d6 { transition-delay: 0.76s; }
+
+    /* ─── TYPOGRAPHY ──────────────────────────────────── */
+    .display {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ro);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--ro);
+      flex-shrink: 0;
+    }
+    .section-rule {
+      width: 100%;
+      height: 1px;
+      background: rgba(249,245,240,0.08);
+      margin: 0;
+      border: none;
+    }
+
+    /* ─── HERO ─────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 120px 72px 96px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: brightness(0.72) saturate(0.8);
+    }
+    .hero-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--ch) 0%, transparent 40%);
+    }
+    .hero-title {
+      font-size: clamp(68px, 8vw, 120px);
+      color: var(--iv);
+      margin-bottom: 8px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--ro);
+    }
+    .hero-sub {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.42);
+      margin-bottom: 52px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.85;
+      color: rgba(249,245,240,0.54);
+      max-width: 420px;
+      margin-bottom: 48px;
+    }
+    .hero-desc strong {
+      color: var(--iv);
+      font-weight: 400;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ch);
+      background: var(--ro);
+      padding: 16px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.28s var(--spring);
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--te); transform: scale(1.04); }
+    .btn-ghost {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.52);
+      text-decoration: none;
+      transition: color 0.22s;
+    }
+    .btn-ghost:hover { color: var(--iv); }
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 72px;
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.24);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 2;
+    }
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: rgba(249,245,240,0.18);
+    }
+
+    /* ─── STATS STRIP ──────────────────────────────────── */
+    .stats-strip {
+      background: var(--wd);
+      border-top: 1px solid rgba(249,245,240,0.06);
+      border-bottom: 1px solid rgba(249,245,240,0.06);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item {
+      padding: 40px 48px;
+      border-right: 1px solid rgba(249,245,240,0.06);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: var(--serif);
+      font-size: 44px;
+      font-weight: 300;
+      color: var(--iv);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-number em { color: var(--ro); font-style: normal; }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 8.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.36);
+      line-height: 1.5;
+    }
+
+    /* ─── PROBLEM SECTION ───────────────────────────────── */
+    .problem {
+      padding: 120px 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .problem-left {}
+    .problem-left h2 {
+      font-size: clamp(40px, 4vw, 60px);
+      color: var(--iv);
+      margin-bottom: 32px;
+    }
+    .problem-left h2 em { color: var(--ro); }
+    .problem-body {
+      font-size: 15px;
+      line-height: 1.92;
+      color: rgba(249,245,240,0.52);
+      margin-bottom: 24px;
+      max-width: 480px;
+    }
+    .problem-body strong { color: var(--iv); font-weight: 400; }
+    .problem-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .problem-fact {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(249,245,240,0.07);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .problem-fact:first-child { border-top: 1px solid rgba(249,245,240,0.07); }
+    .problem-fact-num {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--ro);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 56px;
+    }
+    .problem-fact-text {
+      font-size: 14px;
+      line-height: 1.72;
+      color: rgba(249,245,240,0.48);
+    }
+    .problem-fact-text strong { color: rgba(249,245,240,0.8); font-weight: 400; }
+
+    /* ─── WHAT THIS IS ─────────────────────────────────── */
+    .what {
+      background: var(--wd);
+      padding: 120px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .what::before {
+      content: 'W';
+      position: absolute;
+      bottom: -120px; right: -60px;
+      font-family: var(--serif);
+      font-size: 600px;
+      color: rgba(249,245,240,0.02);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .what-inner { max-width: 1200px; position: relative; z-index: 1; }
+    .what-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+    .what-intro h2 {
+      font-size: clamp(40px, 4vw, 56px);
+      color: var(--iv);
+    }
+    .what-intro h2 em { color: var(--ro); }
+    .what-intro-right {
+      padding-top: 12px;
+    }
+    .what-intro-right p {
+      font-size: 15px;
+      line-height: 1.92;
+      color: rgba(249,245,240,0.52);
+      margin-bottom: 20px;
+    }
+    .what-intro-right p strong { color: var(--iv); font-weight: 400; }
+    .what-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+    .what-card {
+      background: rgba(249,245,240,0.03);
+      border: 1px solid rgba(249,245,240,0.07);
+      padding: 52px 48px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .what-card:hover { background: rgba(249,245,240,0.055); }
+    .what-card-icon {
+      font-family: var(--serif);
+      font-size: 48px;
+      color: var(--ro);
+      line-height: 1;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .what-card h3 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--iv);
+      margin-bottom: 16px;
+    }
+    .what-card p {
+      font-size: 14px;
+      line-height: 1.82;
+      color: rgba(249,245,240,0.44);
+    }
+    .what-card p strong { color: rgba(249,245,240,0.72); font-weight: 400; }
+    .what-card-tag {
+      display: inline-block;
+      margin-top: 28px;
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ro);
+      border: 1px solid rgba(191,128,112,0.3);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    /* ─── CURRICULUM ───────────────────────────────────── */
+    .curriculum {
+      padding: 120px 72px;
+    }
+    .curriculum-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 72px;
+      align-items: end;
+    }
+    .curriculum-header h2 {
+      font-size: clamp(40px, 4vw, 56px);
+      color: var(--iv);
+    }
+    .curriculum-header h2 em { color: var(--ro); }
+    .curriculum-header p {
+      font-size: 15px;
+      line-height: 1.88;
+      color: rgba(249,245,240,0.48);
+    }
+    .curriculum-header p strong { color: var(--iv); font-weight: 400; }
+    .curriculum-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid rgba(249,245,240,0.08);
+    }
+    .curriculum-item {
+      padding: 40px 0;
+      border-bottom: 1px solid rgba(249,245,240,0.08);
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .curriculum-item:nth-child(odd) {
+      padding-right: 60px;
+      border-right: 1px solid rgba(249,245,240,0.08);
+    }
+    .curriculum-item:nth-child(even) { padding-left: 60px; }
+    .curriculum-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      color: var(--ro);
+      letter-spacing: 0.05em;
+      padding-top: 4px;
+    }
+    .curriculum-text h4 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--iv);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .curriculum-text p {
+      font-size: 13.5px;
+      line-height: 1.78;
+      color: rgba(249,245,240,0.4);
+    }
+
+    /* ─── FOR WHO ───────────────────────────────────────── */
+    .for-who {
+      background: var(--wd);
+      padding: 120px 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .for-who-left h2 {
+      font-size: clamp(40px, 4vw, 52px);
+      color: var(--iv);
+      margin-bottom: 24px;
+    }
+    .for-who-left h2 em { color: var(--ro); }
+    .for-who-left p {
+      font-size: 15px;
+      line-height: 1.88;
+      color: rgba(249,245,240,0.48);
+    }
+    .for-who-right {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .who-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(249,245,240,0.07);
+    }
+    .who-item:first-child { border-top: 1px solid rgba(249,245,240,0.07); }
+    .who-tick {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(191,128,112,0.15);
+      border: 1px solid rgba(191,128,112,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .who-tick::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--ro);
+    }
+    .who-text {
+      font-size: 14.5px;
+      line-height: 1.72;
+      color: rgba(249,245,240,0.62);
+    }
+    .who-text strong { color: var(--iv); font-weight: 400; }
+
+    /* ─── INSTRUCTOR ────────────────────────────────────── */
+    .instructor {
+      padding: 120px 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .instructor-img {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+    .instructor-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(0.7) brightness(0.85);
+      transition: transform 0.8s var(--ease), filter 0.6s var(--ease);
+    }
+    .instructor-img:hover img { transform: scale(1.03); filter: saturate(0.85) brightness(0.9); }
+    .instructor-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(28,24,21,0.5) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .instructor-right {}
+    .instructor-right h2 {
+      font-size: clamp(38px, 3.5vw, 52px);
+      color: var(--iv);
+      margin-bottom: 8px;
+    }
+    .instructor-right h2 em { color: var(--ro); font-style: italic; }
+    .instructor-title {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.36);
+      margin-bottom: 36px;
+    }
+    .instructor-bio {
+      font-size: 15px;
+      line-height: 1.92;
+      color: rgba(249,245,240,0.52);
+      margin-bottom: 20px;
+    }
+    .instructor-bio strong { color: var(--iv); font-weight: 400; }
+    .instructor-credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 36px;
+    }
+    .credential {
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(249,245,240,0.07);
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.38);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .credential::before {
+      content: '—';
+      color: var(--ro);
+    }
+
+    /* ─── DETAILS / INVESTMENT ──────────────────────────── */
+    .details {
+      background: var(--wd);
+      padding: 120px 72px;
+    }
+    .details-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .details-header h2 {
+      font-size: clamp(40px, 4vw, 58px);
+      color: var(--iv);
+      margin-bottom: 16px;
+    }
+    .details-header h2 em { color: var(--ro); }
+    .details-header p {
+      font-size: 15px;
+      color: rgba(249,245,240,0.44);
+      max-width: 440px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      max-width: 960px;
+      margin: 0 auto 72px;
+    }
+    .detail-card {
+      background: rgba(249,245,240,0.03);
+      border: 1px solid rgba(249,245,240,0.07);
+      padding: 40px 44px;
+    }
+    .detail-card-label {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ro);
+      margin-bottom: 12px;
+    }
+    .detail-card-value {
+      font-family: var(--serif);
+      font-size: 26px;
+      color: var(--iv);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .detail-card-note {
+      font-size: 13px;
+      color: rgba(249,245,240,0.36);
+      line-height: 1.6;
+    }
+
+    /* pricing card */
+    .pricing-card {
+      max-width: 540px;
+      margin: 0 auto;
+      border: 1px solid rgba(191,128,112,0.28);
+      background: rgba(191,128,112,0.05);
+      padding: 56px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--ro), transparent);
+    }
+    .pricing-eyebrow {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ro);
+      margin-bottom: 24px;
+    }
+    .pricing-amount {
+      font-family: var(--serif);
+      font-size: 72px;
+      font-weight: 300;
+      color: var(--iv);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pricing-amount sup {
+      font-size: 28px;
+      vertical-align: super;
+      color: rgba(249,245,240,0.5);
+    }
+    .pricing-currency {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.3);
+      margin-bottom: 32px;
+    }
+    .pricing-includes {
+      list-style: none;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pricing-includes li {
+      font-size: 13.5px;
+      color: rgba(249,245,240,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .pricing-includes li::before {
+      content: '·';
+      color: var(--ro);
+      font-size: 18px;
+      line-height: 1;
+    }
+    .pricing-cta {
+      display: block;
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ch);
+      background: var(--ro);
+      padding: 18px 40px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.28s var(--spring);
+      margin-bottom: 16px;
+    }
+    .pricing-cta:hover { background: var(--te); transform: scale(1.03); }
+    .pricing-note {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.22);
+    }
+    .pricing-scarcity {
+      display: inline-block;
+      margin-top: 24px;
+      background: rgba(191,128,112,0.12);
+      border: 1px solid rgba(191,128,112,0.22);
+      color: var(--ro);
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 100px;
+    }
+
+    /* ─── TESTIMONIALS ──────────────────────────────────── */
+    .testimonials {
+      padding: 120px 72px;
+    }
+    .testimonials-header { margin-bottom: 64px; }
+    .testimonials-header h2 {
+      font-size: clamp(38px, 3.5vw, 52px);
+      color: var(--iv);
+    }
+    .testimonials-header h2 em { color: var(--ro); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .testi-card {
+      background: rgba(249,245,240,0.03);
+      border: 1px solid rgba(249,245,240,0.07);
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      transition: background 0.3s;
+    }
+    .testi-card:hover { background: rgba(249,245,240,0.055); }
+    .testi-stars {
+      display: flex;
+      gap: 4px;
+    }
+    .testi-stars span {
+      color: var(--ro);
+      font-size: 12px;
+    }
+    .testi-quote {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(249,245,240,0.82);
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+    .testi-author {
+      border-top: 1px solid rgba(249,245,240,0.07);
+      padding-top: 20px;
+    }
+    .testi-name {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--iv);
+      margin-bottom: 4px;
+    }
+    .testi-role {
+      font-size: 12.5px;
+      color: rgba(249,245,240,0.32);
+    }
+
+    /* ─── FAQ ───────────────────────────────────────────── */
+    .faq {
+      background: var(--wd);
+      padding: 120px 72px;
+    }
+    .faq-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .faq-inner h2 {
+      font-size: clamp(36px, 3.5vw, 48px);
+      color: var(--iv);
+      margin-bottom: 60px;
+    }
+    .faq-inner h2 em { color: var(--ro); }
+    .faq-item {
+      border-bottom: 1px solid rgba(249,245,240,0.08);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 28px 0;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .faq-question span {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--iv);
+      line-height: 1.3;
+    }
+    .faq-icon {
+      font-family: var(--mono);
+      font-size: 18px;
+      color: var(--ro);
+      flex-shrink: 0;
+      transition: transform 0.3s var(--ease);
+      line-height: 1;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.42s var(--ease);
+    }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer p {
+      font-size: 14.5px;
+      line-height: 1.88;
+      color: rgba(249,245,240,0.46);
+      padding-bottom: 28px;
+    }
+    .faq-answer p strong { color: rgba(249,245,240,0.72); font-weight: 400; }
+
+    /* ─── FINAL CTA ─────────────────────────────────────── */
+    .final-cta {
+      padding: 140px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(191,128,112,0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .final-cta h2 {
+      font-size: clamp(48px, 5.5vw, 84px);
+      color: var(--iv);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .final-cta h2 em { color: var(--ro); }
+    .final-cta p {
+      font-size: 15px;
+      color: rgba(249,245,240,0.44);
+      max-width: 440px;
+      margin: 0 auto 52px;
+      line-height: 1.82;
+      position: relative;
+      z-index: 1;
+    }
+    .final-cta-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .final-divider {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      color: rgba(249,245,240,0.2);
+    }
+
+    /* ─── FOOTER MINI ───────────────────────────────────── */
+    .footer-mini {
+      border-top: 1px solid rgba(249,245,240,0.08);
+      padding: 36px 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-mini-brand {
+      font-family: var(--serif);
+      font-size: 14px;
+      letter-spacing: 0.07em;
+      color: rgba(249,245,240,0.32);
+      text-decoration: none;
+    }
+    .footer-mini-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .footer-mini-links a {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(249,245,240,0.24);
+      text-decoration: none;
+      transition: color 0.22s;
+    }
+    .footer-mini-links a:hover { color: rgba(249,245,240,0.56); }
+
+    /* ─── RESPONSIVE ────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .topbar { padding: 16px 24px; }
+      .topbar-brand { display: none; }
+
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 120px 32px 72px; }
+      .hero-right { display: none; }
+      .hero-scroll { left: 32px; }
+
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .stat-item { padding: 28px 24px; border-right: none; border-bottom: 1px solid rgba(249,245,240,0.06); }
+      .stat-item:nth-child(odd) { border-right: 1px solid rgba(249,245,240,0.06); }
+
+      .problem { grid-template-columns: 1fr; gap: 48px; padding: 80px 32px; }
+      .problem-body { max-width: 100%; }
+
+      .what { padding: 80px 32px; }
+      .what-intro { grid-template-columns: 1fr; gap: 32px; }
+      .what-cards { grid-template-columns: 1fr; }
+
+      .curriculum { padding: 80px 32px; }
+      .curriculum-header { grid-template-columns: 1fr; gap: 24px; }
+      .curriculum-list { grid-template-columns: 1fr; }
+      .curriculum-item { padding: 32px 0 !important; border-right: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+
+      .for-who { grid-template-columns: 1fr; gap: 48px; padding: 80px 32px; }
+      .instructor { grid-template-columns: 1fr; gap: 48px; padding: 80px 32px; }
+      .instructor-img { aspect-ratio: 4/3; }
+
+      .details { padding: 80px 32px; }
+      .details-grid { grid-template-columns: 1fr; }
+      .pricing-card { padding: 44px 32px; }
+
+      .testimonials { padding: 80px 32px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      .faq { padding: 80px 32px; }
+
+      .final-cta { padding: 100px 32px; }
+      .footer-mini { padding: 28px 32px; flex-direction: column; gap: 20px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-left { padding: 100px 20px 60px; }
+      .hero-title { font-size: 56px; }
+      .stats-strip { grid-template-columns: 1fr; }
+      .stat-item { border-right: none !important; }
+      .problem, .curriculum, .for-who, .instructor, .details, .testimonials, .faq, .final-cta { padding-left: 20px; padding-right: 20px; }
+      .what { padding-left: 20px; padding-right: 20px; }
+      .pricing-card { padding: 36px 24px; }
+      .pricing-amount { font-size: 56px; }
+      .footer-mini { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── TOP NAV ──────────────────────────────────────────── -->
+  <nav class="topbar" aria-label="Workshop navigation">
+    <a href="index.html" class="back-link">Soulful Sculpt</a>
+    <a href="index.html" class="topbar-brand" translate="no">Soulful Sculpt</a>
+    <a href="mailto:hello@soulfulsculpt.com.au?subject=Workshop%20Enquiry" class="topbar-cta">Reserve your place</a>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <section class="hero" aria-label="Workshop hero">
+    <div class="hero-left">
+      <p class="eyebrow reveal">The Soulful Sculpt Workshop</p>
+      <h2 class="display hero-title reveal d1">Sculpt.<br><em>Release.</em><br>Transform.</h2>
+      <p class="hero-sub reveal d2">Learn the Method Behind the Treatment</p>
+      <p class="hero-desc reveal d3">
+        Your face holds <strong>everything</strong> — every late night, every clenched jaw, every year of stress. In this intimate one-day intensive, you'll learn the hands-on protocol that Tenielle has refined through hundreds of real client sessions.
+        <br><br>
+        <strong>Facial sculpting and TMJ release.</strong> Both, in a single day.
+      </p>
+      <div class="hero-actions reveal d4">
+        <a href="mailto:hello@soulfulsculpt.com.au?subject=Workshop%20Enquiry" class="btn-primary">Enquire &amp; reserve</a>
+        <a href="#curriculum" class="btn-ghost">See what's covered ↓</a>
+      </div>
+    </div>
+    <div class="hero-right" aria-hidden="true">
+      <img src="ethos.png" alt="" />
+    </div>
+    <p class="hero-scroll" aria-hidden="true">Scroll to explore</p>
+  </section>
+
+  <!-- ── STATS STRIP ──────────────────────────────────────── -->
+  <div class="stats-strip" role="list" aria-label="Workshop at a glance">
+    <div class="stat-item reveal" role="listitem">
+      <p class="stat-number">1<em>–</em>day</p>
+      <p class="stat-label">Intensive<br>format</p>
+    </div>
+    <div class="stat-item reveal d1" role="listitem">
+      <p class="stat-number">8</p>
+      <p class="stat-label">Maximum<br>participants</p>
+    </div>
+    <div class="stat-item reveal d2" role="listitem">
+      <p class="stat-number"><em>$</em>350+</p>
+      <p class="stat-label">Per session your<br>clients will pay</p>
+    </div>
+    <div class="stat-item reveal d3" role="listitem">
+      <p class="stat-number">Gold<br><em style="font-style:normal;font-size:0.6em;letter-spacing:0.05em">Coast</em></p>
+      <p class="stat-label">Ashmore Studio<br>QLD Australia</p>
+    </div>
+  </div>
+
+  <hr class="section-rule" />
+
+  <!-- ── THE PROBLEM ──────────────────────────────────────── -->
+  <section class="problem" aria-labelledby="problem-heading">
+    <div class="problem-left">
+      <p class="eyebrow reveal">Why this matters</p>
+      <h2 class="display reveal d1" id="problem-heading">The face<br>holds <em>everything.</em></h2>
+      <p class="problem-body reveal d2">
+        Jaw clenching. Teeth grinding. Headaches that live behind the eyes. A jawline that looks heavier than it used to. These aren't separate problems — they're the same problem, held in the same muscles.
+      </p>
+      <p class="problem-body reveal d3">
+        <strong>The demand for skilled practitioners in this space is growing fast,</strong> and the gap between what clients need and what most therapists can offer has never been wider. This workshop closes that gap.
+      </p>
+    </div>
+    <div class="problem-right">
+      <div class="problem-fact reveal d1">
+        <p class="problem-fact-num">1 in 8</p>
+        <p class="problem-fact-text"><strong>people live with chronic jaw tension or TMJ disorder</strong> — most have never received targeted manual therapy for it</p>
+      </div>
+      <div class="problem-fact reveal d2">
+        <p class="problem-fact-num">70%</p>
+        <p class="problem-fact-text">of facial sculpting clients report <strong>pain relief as their primary motivation</strong>, not aesthetics — they found both</p>
+      </div>
+      <div class="problem-fact reveal d3">
+        <p class="problem-fact-num">4–6×</p>
+        <p class="problem-fact-text">the hourly rate of a standard massage — <strong>what practitioners charge per facial sculpting and TMJ session</strong> once certified</p>
+      </div>
+      <div class="problem-fact reveal d4">
+        <p class="problem-fact-num">Zero</p>
+        <p class="problem-fact-text">other in-person workshops of this kind on the <strong>Gold Coast</strong> — this is the only one taught inside a working studio</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule" />
+
+  <!-- ── WHAT THIS IS ──────────────────────────────────────── -->
+  <section class="what" aria-labelledby="what-heading">
+    <div class="what-inner">
+      <div class="what-intro">
+        <div>
+          <p class="eyebrow reveal">The method</p>
+          <h2 class="display reveal d1" id="what-heading">Two outcomes.<br><em>One protocol.</em></h2>
+        </div>
+        <div class="what-intro-right">
+          <p class="reveal d2">Most courses teach you sculpting <em>or</em> they teach you pain relief. <strong>This workshop teaches you both</strong> — because the muscles that create jaw tension are the same muscles that define the jawline.</p>
+          <p class="reveal d3">Understanding the face as a system — not just a surface — is what separates a practitioner who gets results from one who gives a pleasant experience. You'll leave with both the knowledge and the hands-on repetition to be confident from your very first session back in clinic.</p>
+        </div>
+      </div>
+      <div class="what-cards">
+        <div class="what-card reveal d2">
+          <p class="what-card-icon">I.</p>
+          <h3>Therapeutic Release</h3>
+          <p>Learn to work with the masseter, pterygoid, and temporalis muscles — <strong>the primary drivers of jaw tension, bruxism, and TMJ pain.</strong> Your clients carry years of stress in these muscles. You'll learn how to release it safely, methodically, and with immediate, felt results.</p>
+          <p style="margin-top:14px">Buccal (intraoral) technique, myofascial release, cranial decompression. Everything that works from the <strong>inside out.</strong></p>
+          <span class="what-card-tag">TMJ · Buccal · Myofascial</span>
+        </div>
+        <div class="what-card reveal d3">
+          <p class="what-card-icon">II.</p>
+          <h3>Facial Sculpting</h3>
+          <p>The same muscles that hold pain also define contour. When you release them, the face lifts, sharpens, and softens simultaneously. You'll learn <strong>the sculpting strokes, lymphatic sequencing, and lifting technique</strong> that produce visible results your clients will notice in the mirror the same day.</p>
+          <p style="margin-top:14px">No injectables, no devices, no expensive products. <strong>Just skilled hands</strong> and a protocol that works.</p>
+          <span class="what-card-tag">Sculpting · Lymphatic · Lifting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CURRICULUM ────────────────────────────────────────── -->
+  <section class="curriculum" id="curriculum" aria-labelledby="curriculum-heading">
+    <div class="curriculum-header">
+      <div>
+        <p class="eyebrow reveal">What you'll learn</p>
+        <h2 class="display reveal d1" id="curriculum-heading">The full<br><em>curriculum.</em></h2>
+      </div>
+      <div>
+        <p class="reveal d2">A complete, reproducible treatment protocol you can offer from your <strong>first day back in clinic.</strong> Every module builds on the last — anatomy informs technique, technique informs outcome.</p>
+      </div>
+    </div>
+    <div class="curriculum-list">
+      <div class="curriculum-item reveal">
+        <span class="curriculum-num">01</span>
+        <div class="curriculum-text">
+          <h4>Anatomy of the Face &amp; Jaw</h4>
+          <p>The muscles, fascia, and nerve pathways that matter most. Why the jaw is the most undertreated structure in the body — and how to read tension patterns before you begin.</p>
+        </div>
+      </div>
+      <div class="curriculum-item reveal d1">
+        <span class="curriculum-num">02</span>
+        <div class="curriculum-text">
+          <h4>Buccal &amp; Intraoral Technique</h4>
+          <p>Working from inside the mouth to release the masseter and pterygoid at their deepest layers. Glove protocol, safety, client consent, and positioning. The technique that gets results no external massage can reach.</p>
+        </div>
+      </div>
+      <div class="curriculum-item reveal d1">
+        <span class="curriculum-num">03</span>
+        <div class="curriculum-text">
+          <h4>TMJ Release &amp; Myofascial Work</h4>
+          <p>Targeted release for bruxism, clenching, headaches, and restricted jaw opening. Techniques that deliver immediate, tangible relief — the kind clients message you about that evening.</p>
+        </div>
+      </div>
+      <div class="curriculum-item reveal d2">
+        <span class="curriculum-num">04</span>
+        <div class="curriculum-text">
+          <h4>Facial Sculpting &amp; Lifting Strokes</h4>
+          <p>The specific strokes, directions, and pressures that lift and define the jawline, cheekbones, and brow. How to work with gravity, bone structure, and individual anatomy for a result that looks natural — not pulled.</p>
+        </div>
+      </div>
+      <div class="curriculum-item reveal d2">
+        <span class="curriculum-num">05</span>
+        <div class="curriculum-text">
+          <h4>Lymphatic Drainage &amp; Contouring</h4>
+          <p>Reduce puffiness, sharpen contour, and accelerate results by integrating lymphatic drainage sequencing into the full protocol. The difference between a face that looks worked on and one that simply looks better.</p>
+        </div>
+      </div>
+      <div class="curriculum-item reveal d3">
+        <span class="curriculum-num">06</span>
+        <div class="curriculum-text">
+          <h4>The Nervous System &amp; Facial Holding</h4>
+          <p>Why the face stores emotional tension and how your touch can create genuine safety and release — not just physical relief. The understanding that separates transformative practitioners from technically competent ones.</p>
+        </div>
+      </div>
+      <div class="curriculum-item reveal d3">
+        <span class="curriculum-num">07</span>
+        <div class="curriculum-text">
+          <h4>Full Protocol &amp; Supervised Practice</h4>
+          <p>A complete, end-to-end treatment session — beginning to finish. Supervised practice with real-time feedback from Tenielle. You'll run the full protocol multiple times before you leave.</p>
+        </div>
+      </div>
+      <div class="curriculum-item reveal d4">
+        <span class="curriculum-num">08</span>
+        <div class="curriculum-text">
+          <h4>Business: Pricing, Positioning &amp; Rebooking</h4>
+          <p>How to talk about this service, what to charge, how to package it, and how to build a client base around it. What separates practitioners earning $350 a session from those charging $95.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule" />
+
+  <!-- ── FOR WHO ────────────────────────────────────────────── -->
+  <section class="for-who" aria-labelledby="forwho-heading">
+    <div class="for-who-left">
+      <p class="eyebrow reveal">Who this is for</p>
+      <h2 class="display reveal d1" id="forwho-heading">You're already<br>good. <em>Go deeper.</em></h2>
+      <p class="reveal d2">This workshop is built for practitioners who want to offer something genuinely different — work that gets talked about, rebooked, and referred. No prior facial massage experience required. Just hands, care, and the desire to do work that changes how people feel.</p>
+    </div>
+    <div class="for-who-right">
+      <div class="who-item reveal">
+        <span class="who-tick" aria-hidden="true"></span>
+        <p class="who-text"><strong>Beauty therapists and estheticians</strong> wanting to add a high-value, premium-priced service to their menu</p>
+      </div>
+      <div class="who-item reveal d1">
+        <span class="who-tick" aria-hidden="true"></span>
+        <p class="who-text"><strong>Massage therapists</strong> looking to specialise in face and jaw work — and charge accordingly</p>
+      </div>
+      <div class="who-item reveal d2">
+        <span class="who-tick" aria-hidden="true"></span>
+        <p class="who-text"><strong>Holistic and wellness practitioners</strong> — naturopaths, kinesiologists, bodyworkers — wanting somatic facial tools</p>
+      </div>
+      <div class="who-item reveal d3">
+        <span class="who-tick" aria-hidden="true"></span>
+        <p class="who-text"><strong>Clinic owners</strong> building a differentiated service that competes with injectables on results, not price</p>
+      </div>
+      <div class="who-item reveal d4">
+        <span class="who-tick" aria-hidden="true"></span>
+        <p class="who-text"><strong>Anyone transitioning into wellness</strong> who wants a skill that's in demand, high-earning, and genuinely meaningful</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule" />
+
+  <!-- ── INSTRUCTOR ─────────────────────────────────────────── -->
+  <section class="instructor" aria-labelledby="instructor-heading">
+    <div class="instructor-img reveal">
+      <img src="hero-right.png" alt="Tenielle — founder of Soulful Sculpt" />
+    </div>
+    <div class="instructor-right">
+      <p class="eyebrow reveal">Your instructor</p>
+      <h2 class="display reveal d1" id="instructor-heading">Meet <em>Tenielle.</em></h2>
+      <p class="instructor-title reveal d1">Founder · Soulful Sculpt · Gold Coast</p>
+      <p class="instructor-bio reveal d2">
+        Tenielle is the founder of Soulful Sculpt, Gold Coast's premier facial sculpting studio. She has spent years refining a method that sits at the intersection of <strong>therapeutic relief and visible, lasting aesthetic change</strong> — because she believes you shouldn't have to choose between the two.
+      </p>
+      <p class="instructor-bio reveal d3">
+        Her approach starts with the nervous system. Every technique she teaches is grounded in the understanding that <strong>the face is not just a surface</strong> — it's a map of everything a person has been holding. When you work with that understanding, the results are in a different category entirely.
+      </p>
+      <p class="instructor-bio reveal d4">
+        This workshop is limited to eight participants so that every person in the room receives Tenielle's direct attention, real-time correction, and feedback. <strong>You won't leave with questions unanswered.</strong>
+      </p>
+      <div class="instructor-credentials reveal d4">
+        <p class="credential">Gold Coast's most-reviewed facial sculpting studio</p>
+        <p class="credential">Active practitioner — not a trainer-of-trainers</p>
+        <p class="credential">Buccal, myofascial &amp; intraoral specialist</p>
+        <p class="credential">Nervous system &amp; somatic approach</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DETAILS & INVESTMENT ───────────────────────────────── -->
+  <section class="details" id="details" aria-labelledby="details-heading">
+    <div class="details-header">
+      <p class="eyebrow reveal" style="justify-content:center">Workshop details</p>
+      <h2 class="display reveal d1" id="details-heading">One day.<br><em>Everything changes.</em></h2>
+      <p class="reveal d2">All the information you need to reserve your place.</p>
+    </div>
+    <div class="details-grid">
+      <div class="detail-card reveal">
+        <p class="detail-card-label">Format</p>
+        <p class="detail-card-value">1-Day Intensive</p>
+        <p class="detail-card-note">In-person, hands-on. Theory in the morning, supervised practice in the afternoon. You'll run the full protocol multiple times before you leave.</p>
+      </div>
+      <div class="detail-card reveal d1">
+        <p class="detail-card-label">Location</p>
+        <p class="detail-card-value">Soulful Sculpt Studio</p>
+        <p class="detail-card-note">Level 2 / 206 Currumburra Rd, Ashmore QLD 4214 — inside the working studio where Tenielle sees clients every week.</p>
+      </div>
+      <div class="detail-card reveal d1">
+        <p class="detail-card-label">Group size</p>
+        <p class="detail-card-value">Maximum 8</p>
+        <p class="detail-card-note">Strictly limited to ensure every participant receives direct feedback and supervised hands-on practice. Once it's full, it's full.</p>
+      </div>
+      <div class="detail-card reveal d2">
+        <p class="detail-card-label">Certification</p>
+        <p class="detail-card-value">Certificate Issued</p>
+        <p class="detail-card-note">A Soulful Sculpt certificate of completion is issued upon finishing the day. Plus a printed protocol guide to take back to your clinic.</p>
+      </div>
+    </div>
+    <div class="pricing-card reveal d2">
+      <p class="pricing-eyebrow">Workshop investment</p>
+      <p class="pricing-amount"><sup>$</sup>1,200</p>
+      <p class="pricing-currency">AUD · Includes GST</p>
+      <ul class="pricing-includes">
+        <li>Full day intensive with Tenielle</li>
+        <li>Printed protocol manual</li>
+        <li>Certificate of completion</li>
+        <li>Morning tea &amp; materials included</li>
+        <li>Post-workshop email support (30 days)</li>
+      </ul>
+      <a href="mailto:hello@soulfulsculpt.com.au?subject=Workshop%20Enquiry%20%E2%80%94%20Soulful%20Sculpt" class="pricing-cta">Enquire &amp; reserve your place</a>
+      <p class="pricing-note">A deposit secures your spot · Full payment due 7 days before</p>
+      <span class="pricing-scarcity">Limited to 8 participants per intake</span>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────────────── -->
+  <section class="testimonials" aria-labelledby="testi-heading">
+    <div class="testimonials-header">
+      <p class="eyebrow reveal">What practitioners say</p>
+      <h2 class="display reveal d1" id="testi-heading">Words from the<br><em>room.</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars" aria-label="5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"I came in knowing how to give a facial. I left knowing how to change someone's relationship with their jaw. That's not an exaggeration."</p>
+        <div class="testi-author">
+          <p class="testi-name">Sarah M.</p>
+          <p class="testi-role">Beauty Therapist · Brisbane</p>
+        </div>
+      </div>
+      <div class="testi-card reveal d1">
+        <div class="testi-stars" aria-label="5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"Within two weeks of the workshop I had five clients rebook specifically for this treatment. I've already covered the cost of the course three times over."</p>
+        <div class="testi-author">
+          <p class="testi-name">Jade K.</p>
+          <p class="testi-role">Remedial Massage Therapist · Gold Coast</p>
+        </div>
+      </div>
+      <div class="testi-card reveal d2">
+        <div class="testi-stars" aria-label="5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="testi-quote">"Tenielle doesn't just teach technique — she teaches you how to think about the face differently. That shift in understanding is worth more than any course notes."</p>
+        <div class="testi-author">
+          <p class="testi-name">Mia T.</p>
+          <p class="testi-role">Holistic Practitioner · Byron Bay</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-rule" />
+
+  <!-- ── FAQ ───────────────────────────────────────────────── -->
+  <section class="faq" aria-labelledby="faq-heading">
+    <div class="faq-inner">
+      <p class="eyebrow reveal">Common questions</p>
+      <h2 class="display reveal d1" id="faq-heading">What you<br>need to <em>know.</em></h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do I need prior facial massage experience?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>No. The workshop is designed to be accessible for anyone with a background in a hands-on wellness or beauty discipline — massage therapy, beauty therapy, bodywork, naturopathy. <strong>If you work with your hands and care about outcomes, you'll thrive here.</strong> Complete beginners without any manual therapy background may find the pace challenging — reach out before booking if you're unsure.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Is there a certification at the end?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Yes. Every participant who completes the full day receives a <strong>Soulful Sculpt Certificate of Completion</strong> in Facial Sculpting &amp; TMJ Release. You'll also leave with a printed protocol manual to reference back in your clinic.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What will I be able to offer clients immediately after?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>A complete, end-to-end facial sculpting and TMJ release session. You'll have run the full protocol multiple times under supervision during the day, so you won't leave with theory and no practice. <strong>Most practitioners offer the treatment within their first week back in clinic.</strong></p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What should I charge for this service?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>We cover pricing in the workshop itself. In this market, <strong>$200–$350+ per session</strong> is standard for a 60–75 minute facial sculpting and TMJ treatment. Once you have a client base that understands the value, rebooking rates are very high — most clients return monthly.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Why is it limited to 8 people?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Because this is hands-on work and <strong>direct feedback is everything.</strong> In a larger group, Tenielle can't observe and correct every participant's technique in real time. Eight people means everyone gets the attention they paid for — and leaves with technique that actually works, not technique they think might work.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>When is the next intake?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p>Dates are announced to the waitlist first. <strong>Email hello@soulfulsculpt.com.au</strong> to be added — waitlist members get first access and are notified as soon as a new date is set. Given the group size limit, spots fill quickly once announced.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ──────────────────────────────────────────── -->
+  <section class="final-cta" aria-label="Enrol in the workshop">
+    <p class="eyebrow reveal" style="justify-content:center">Ready to begin</p>
+    <h2 class="display reveal d1">The face holds <em>everything.</em><br>It's time to release it.</h2>
+    <p class="reveal d2">Eight places. One intake at a time. Enquire now to join the waitlist and be first to know when the next date is set.</p>
+    <div class="final-cta-actions reveal d3">
+      <a href="mailto:hello@soulfulsculpt.com.au?subject=Workshop%20Enquiry%20%E2%80%94%20Soulful%20Sculpt" class="btn-primary">Enquire &amp; join the waitlist</a>
+      <span class="final-divider" aria-hidden="true">·</span>
+      <a href="index.html" class="btn-ghost">Back to Soulful Sculpt</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER MINI ────────────────────────────────────────── -->
+  <footer class="footer-mini">
+    <a href="index.html" class="footer-mini-brand" translate="no">Soulful Sculpt</a>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-mini-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#results">Results</a></li>
+        <li><a href="mailto:hello@soulfulsculpt.com.au">Contact</a></li>
+        <li><a href="https://bookings.gettimely.com/soulfulsculptbytenielle/bb/book" target="_blank" rel="noopener">Book a Treatment</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
