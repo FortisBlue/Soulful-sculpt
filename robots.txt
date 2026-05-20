@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.soulfulsculpt.com.au/sitemap.xml
+Sitemap: https://soulfulsculpt.com.au/sitemap.xml
