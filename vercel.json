@@ -5,11 +5,6 @@
       "destination": "https://bookings.gettimely.com/soulfulsculptbytenielle/bb/book",
       "permanent": false
     },
-    {
-      "source": "https://www.soulfulsculpt.com.au/:path*",
-      "destination": "https://soulfulsculpt.com.au/:path*",
-      "permanent": true
-    }
   ],
   "headers": [
     {
