@@ -19,7 +19,7 @@ if w / h > target_ratio:
     img = img.crop((left, 0, left + new_w, h))
 else:
     new_h = int(w / target_ratio)
-    top = (h - new_h) // 8   # bias toward top so face isn't cropped
+    top = int((h - new_h) * 0.62)  # face/hands sit in lower 60% of portrait
     img = img.crop((0, top, w, top + new_h))
 
 img = img.resize((660, 495), Image.LANCZOS)
