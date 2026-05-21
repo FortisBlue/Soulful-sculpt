@@ -4,6 +4,11 @@
       "source": "/book",
       "destination": "https://bookings.gettimely.com/soulfulsculptbytenielle/bb/book",
       "permanent": false
+    },
+    {
+      "source": "/giftcards",
+      "destination": "https://bookings.gettimely.com/soulfulsculptbytenielle/bb/purchase",
+      "permanent": false
     }
   ],
   "headers": [
