@@ -1669,106 +1669,9 @@
       .invite-success { padding: 90px 20px 52px; }
       .invite-field input { font-size: 24px; }
     }
-    /* ─── ANNOUNCEMENT POPUP ────────────────────── */
-    .popup-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(28,24,21,0.55);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      z-index: 8000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      opacity: 0;
-      transition: opacity 0.4s var(--ease);
-      pointer-events: none;
-    }
-    .popup-overlay.visible {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .popup {
-      background: var(--iv);
-      border: 1px solid var(--bl);
-      max-width: 480px;
-      width: 100%;
-      padding: 48px 44px 40px;
-      position: relative;
-      box-shadow: 0 24px 64px rgba(28,24,21,0.18);
-      transform: translateY(16px);
-      transition: transform 0.4s var(--spring);
-    }
-    .popup-overlay.visible .popup {
-      transform: translateY(0);
-    }
-    .popup-eyebrow {
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--te);
-      margin-bottom: 16px;
-    }
-    .popup-title {
-      font-family: var(--serif);
-      font-size: clamp(28px, 6vw, 38px);
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--ch);
-      margin-bottom: 16px;
-    }
-    .popup-title em { font-style: italic; color: var(--te); }
-    .popup-body {
-      font-family: var(--sans);
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.7;
-      color: rgba(28,24,21,0.7);
-      margin-bottom: 28px;
-    }
-    .popup-book {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--iv);
-      background: var(--ch);
-      padding: 14px 28px;
-      text-decoration: none;
-      transition: background 0.25s;
-    }
-    .popup-book:hover { background: var(--te); }
-    .popup-close {
-      position: absolute;
-      top: 16px; right: 18px;
-      background: none;
-      border: none;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      color: rgba(28,24,21,0.35);
-      cursor: pointer;
-      padding: 6px;
-      transition: color 0.2s;
-    }
-    .popup-close:hover { color: var(--ch); }
   </style>
 </head>
 <body>
-
-  <!-- ── ANNOUNCEMENT POPUP ──────────────────────────── -->
-  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-label="Announcement">
-    <div class="popup">
-      <button class="popup-close" id="popup-close" aria-label="Close">✕ Close</button>
-      <p class="popup-eyebrow">Exciting News</p>
-      <p class="popup-title">Soulful Sculpt<br>is coming to <em>Melbourne</em></p>
-      <p class="popup-body">Tenielle will be in Melbourne this July offering her signature facial sculpting, TMJ release, buccal massage and lymphatic drainage treatments. Spaces are strictly limited — secure yours early.</p>
-      <a href="https://bookings.gettimely.com/soulfulsculptbytenielle/bb/book" target="_blank" rel="noopener" class="popup-book">Book Your Session →</a>
-    </div>
-  </div>
 
   <a href="#main" style="position:absolute;left:-9999px;top:4px;z-index:9999;background:var(--iv);padding:8px 16px;font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-decoration:none;color:var(--ch);">Skip to main content</a>
 
@@ -2237,26 +2140,6 @@
         document.body.style.overflow = '';
       });
     });
-
-    // ── Announcement popup ─────────────────────────
-    (function () {
-      var overlay = document.getElementById('popup-overlay');
-      var closeBtn = document.getElementById('popup-close');
-      if (!overlay) return;
-      // Only show once per session; hide after July 31 2026
-      var popupExpiry = new Date('2026-08-01');
-      if (!sessionStorage.getItem('popup-dismissed') && new Date() < popupExpiry) {
-        setTimeout(function () { overlay.classList.add('visible'); }, 1200);
-      }
-      function dismiss() {
-        overlay.classList.remove('visible');
-        sessionStorage.setItem('popup-dismissed', '1');
-      }
-      closeBtn.addEventListener('click', dismiss);
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) dismiss();
-      });
-    })();
 
     // ── Nav scrolled state ─────────────────────────
     var nav = document.getElementById('nav');
